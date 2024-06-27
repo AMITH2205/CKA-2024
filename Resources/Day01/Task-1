@@ -1,0 +1,85 @@
+What is Docker?
+
+In early 2000's developers were facing compatiable issue across different computers. The piece of Code works in a machine and dont work in other machine. This created a mess among developers and Operationational temas.
+People from Ops team would need to look into the every incident and rectify the configuration of each machines.
+
+To eradicate this problem, there came an Open Source Project called "Docker".
+
+So What is Docker.....!!
+
+Just Simple, Docker is a containerization tool. It packages the application, builds and make it easy for transport.
+This made the works of both developer and operational team easier and time saving.
+
+Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
+Containers allow a developer to package up an application with all parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+
+Here's a simple analogy:
+
+Imagine you are sending a package to a friend. Normally, you would need to gather all the items, pack them carefully, and hope that they arrive intact and can be used immediately.
+In the software world, this package is like an application, and the items inside are the code, libraries, and dependencies it needs to run. Without proper packaging, the application might not work correctly on your friend’s computer because of differences in the environment (e.g., different operating systems, missing libraries).
+Docker simplifies this by putting the application and everything it needs to run into a single container, which can then be run on any computer that has Docker installed.
+
+Example:
+Without Docker:
+
+You develop a web application on your local machine.
+To run this application on a server, you need to manually install the right version of the programming language, web server, and all the necessary libraries.
+This process can be error-prone and time-consuming, and there might be differences between your development environment and the production server, causing the application to break.
+With Docker:
+
+You create a Docker container for your web application. This container includes the application code, the web server, the programming language, and all the necessary libraries.
+You can then run this container on any machine that has Docker installed, and it will work exactly the same way as it did on your development machine.
+This ensures consistency and reliability, making it much easier to deploy and scale applications.
+
+Now what is the difference between VM and Docker.....?
+
+Virtual Machines (VMs) and Docker containers are both technologies used to create isolated environments for running applications, but they have significant differences in their architecture, performance, and use cases.
+
+Key Differences Between VMs and Docker Containers
+Architecture:
+
+VMs:
+VMs run on a hypervisor (like VMware, Hyper-V, or KVM) which virtualizes the physical hardware.
+Each VM includes a full operating system (OS) instance, including its own kernel, and virtualized hardware resources.
+This makes VMs heavy in terms of disk space, memory usage, and boot time.
+Docker Containers:
+Docker containers run on a container engine (like Docker Engine) that leverages the host OS kernel.
+Containers share the host OS kernel and isolate the application processes in user space.
+This makes containers lightweight, with faster startup times and less resource overhead compared to VMs.
+Performance:
+
+VMs:
+VMs can be slower to start and use more system resources since each VM runs a full OS.
+Performance can be impacted due to the overhead of the hypervisor and virtualized hardware.
+Docker Containers:
+Containers are quick to start and stop because they don’t need to boot an entire OS.
+They are more efficient in terms of resource usage because they share the host OS kernel and libraries.
+Isolation:
+
+VMs:
+VMs provide strong isolation as each VM runs a complete OS instance with its own kernel.
+They are suitable for running applications that require full isolation and different OS environments.
+Docker Containers:
+Containers provide process-level isolation and share the host OS kernel.
+They are suitable for running applications that can share the same OS kernel but need isolated environments for processes and dependencies.
+Portability:
+
+VMs:
+VMs are less portable because they include a full OS and are tied to the virtual hardware configuration.
+Moving VMs between different hypervisors or physical servers can be complex.
+Docker Containers:
+Containers are highly portable and can run on any system with the Docker Engine installed, regardless of the underlying hardware.
+Docker images can be easily shared and deployed across different environments, from development to production.
+Use Cases:
+
+VMs:
+Suitable for applications that require strong isolation, different operating systems, or specific OS-level features.
+Commonly used for legacy applications, multi-tenant applications with strict isolation requirements, and environments needing different OS versions.
+Docker Containers:
+Ideal for microservices architectures, DevOps practices, continuous integration/continuous deployment (CI/CD), and cloud-native applications.
+Used for applications that benefit from rapid scaling, easy portability, and consistent environments across development and production.
+
+Summary:
+VMs provide full OS-level virtualization with strong isolation but are resource-intensive and slower to start.
+Docker containers offer lightweight, efficient process-level isolation, making them fast, portable, and ideal for modern application development and deployment practices.
+Both technologies have their own advantages and are often used together in hybrid environments to leverage the strengths of each.
